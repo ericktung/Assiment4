@@ -11,11 +11,13 @@ which dragon you want to choose?
     + [{Dragon1}] -> conferm1
     + [{Dragon2}] -> conferm2
     + [{Dragon3}] -> conferm3
+    
  ===pick2===
 which dragon you want to choose?
     + [{Dragon1}] -> conferm4
     + [{Dragon2}] -> conferm5
     + [{Dragon3}] -> conferm6
+    
  ===pick3===
 which dragon you want to choose?
     + [{Dragon1}] -> conferm7
@@ -28,41 +30,49 @@ which dragon you want to choose?
   ~DragonOut=Dragon1
  +[yes]->win1
  +[no]->pick
+ 
   ===conferm2===
  Are you sure you want to send {Dragon2} for the {rounds} round ?
  ~DragonOut=Dragon2
  +[yes]->win1
  +[no]->pick
+ 
   ===conferm3===
  Are you sure you want to send {Dragon3} for the {rounds} round ?
  ~DragonOut=Dragon3
  +[yes]->win1
  +[no]->pick
+ 
   ===conferm4===
  Are you sure you want to send {Dragon1} for the {rounds} round ?
  ~DragonOut=Dragon1
  +[yes]->win2
  +[no]->pick2
+ 
   ===conferm5===
  Are you sure you want to send {Dragon2} for the {rounds} round ?
  ~DragonOut=Dragon2
  +[yes]->win2
  +[no]->pick2
+ 
   ===conferm6===
  Are you sure you want to send {Dragon3} for the {rounds} round ?
  ~DragonOut=Dragon3
  +[yes]->win2
  +[no]->pick2
+ 
   ===conferm7===
  Are you sure you want to send {Dragon1} for the {rounds} round ?
  ~DragonOut=Dragon1
  +[yes]->win3
  +[no]->pick3
+ 
   ===conferm8===
  Are you sure you want to send {Dragon2} for the {rounds} round ?
  ~DragonOut=Dragon2
  +[yes]->win3
  +[no]->pick3
+ 
   ===conferm9===
  Are you sure you want to send {Dragon3} for the {rounds} round ?
  ~DragonOut=Dragon3

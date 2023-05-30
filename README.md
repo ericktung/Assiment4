@@ -4,6 +4,8 @@ If you press training it's going to enter a callback phrase asking if you want t
 I add more callbacks when players are facing a tournament, three for each tournament, a total of three tournaments, so have 9 callbacks in the tournament phase 
 and a few in the first chosen phase.- like keep asking user if they want to choose that dragon. 
 also make change with t code now it would not suck in a loop
+
+
 ===pick===
 which dragon you want to choose?
     + [{Dragon1}] -> conferm1

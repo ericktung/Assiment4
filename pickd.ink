@@ -1,134 +1,94 @@
 ===pick===
 which dragon you want to choose?
-    + [{Dragon1}] -> conferm
-    + [{Dragon2}] -> conferm
-    + [{Dragon3}] -> conferm
+    + [{Dragon1}] -> conferm1
+    + [{Dragon2}] -> conferm2
+    + [{Dragon3}] -> conferm3
  ===pick2===
 which dragon you want to choose?
-    + [{Dragon1}] -> conferm2
-    + [{Dragon2}] -> conferm2
-    + [{Dragon3}] -> conferm2
+    + [{Dragon1}] -> conferm4
+    + [{Dragon2}] -> conferm5
+    + [{Dragon3}] -> conferm6
  ===pick3===
 which dragon you want to choose?
-    + [{Dragon1}] -> conferm3
-    + [{Dragon2}] -> conferm3
-    + [{Dragon3}] -> conferm3
-
-
- ===conferm===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win1
- +[no]->pick
-  ===conferm2===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win2
- +[no]->pick2
-  ===conferm3===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win3
- +[no]->pick3
- ===win1===
- The battle is intense, but you are able to use your strategy and the unique abilities of your dragon to overcome your opponent and emerge victorious. With this win, you advance to the next round of the tournament, ready to face even tougher opponents.
- ~rounds+=1
- +[next round]->pick2
-
- ===win2===
-After engaging in a fierce battle, your strategic prowess and the exceptional abilities of your dragons enable you to triumph over your opponent and secure a well-deserved victory. With this remarkable win, you progress to the subsequent round of the tournament, fully prepared to confront even more formidable adversaries in the battles ahead.
- ~rounds+=1
- +[next round]->pick3
- ===win3===
-    The intensity of the battle cannot be denied, but your cunning strategy and the exceptional capabilities of your dragons allow you to prevail against your adversary. This decisive triumph propels you forward to the next round of the tournament, where you mentally prepare yourself to confront adversaries of even greater difficulty and strength.
-     ~rounds=1
-     +[next turnmet1]->2round
-    
-    ===pick4===
-which dragon you want to choose?
-    + [{Dragon1}] -> conferm4
-    + [{Dragon2}] -> conferm4
-    + [{Dragon3}] -> conferm4
- ===pick5===
-which dragon you want to choose?
-    + [{Dragon1}] -> conferm5
-    + [{Dragon2}] -> conferm5
-    + [{Dragon3}] -> conferm5
- ===pick6===
-which dragon you want to choose?
-    + [{Dragon1}] -> conferm6
-    + [{Dragon2}] -> conferm6
-    + [{Dragon3}] -> conferm6
-
-
- ===conferm4===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win4
- +[no]->pick4
-  ===conferm5===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win5
- +[no]->pick5
-  ===conferm6===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win6
- +[no]->pick6
- ===win4===
-The battle is fierce and your opponent has powerful dragons, but you and your dragons are able to hold your ground and fight back with all your might. Using your skills and experience, you are able to exploit your opponent's weaknesses and secure a hard-earned victory.
- ~rounds+=1
- +[next round]->pick5
-
- ===win5===
-
-Despite the intense nature of the battle and the formidable dragons wielded by your opponent, you and your dragons refuse to yield and instead stand your ground, fighting back with unwavering determination. Drawing upon your honed skills and vast experience, you astutely identify and exploit your adversary's vulnerabilities, leading to a well-deserved triumph that was hard-fought and earned through sheer perseverance.
- ~rounds+=1
- +[next round]->pick6
- ===win6===
-    
-In the face of a relentless battle and the presence of formidable dragons under your opponent's command, you and your own dragons demonstrate unwavering resolve, refusing to back down. With resolute determination, you hold your position and counterattack, utilizing your honed skills and extensive expertise to shrewdly pinpoint and capitalize on your adversary's weaknesses. This hard-earned victory, achieved through unwavering perseverance, serves as a testament to your tenacity and skill.
-With this win, you advance to the finals of the tournament, one step closer to the Duke level.
-     ~rounds=1
-     +[next turnmet12]->3round
-     ===pick7===
-which dragon you want to choose?
     + [{Dragon1}] -> conferm7
-    + [{Dragon2}] -> conferm7
-    + [{Dragon3}] -> conferm7
- ===pick8===
-which dragon you want to choose?
-    + [{Dragon1}] -> conferm8
     + [{Dragon2}] -> conferm8
-    + [{Dragon3}] -> conferm8
- ===pick9===
-which dragon you want to choose?
-    + [{Dragon1}] -> conferm9
-    + [{Dragon2}] -> conferm9
     + [{Dragon3}] -> conferm9
 
 
- ===conferm7===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win7
- +[no]->pick7
+ ===conferm1===
+ Are you sure you want to send {Dragon1} for the {rounds} round ?
+  ~DragonOut=Dragon1
+ +[yes]->win1
+ +[no]->pick
+  ===conferm2===
+ Are you sure you want to send {Dragon2} for the {rounds} round ?
+ ~DragonOut=Dragon2
+ +[yes]->win1
+ +[no]->pick
+  ===conferm3===
+ Are you sure you want to send {Dragon3} for the {rounds} round ?
+ ~DragonOut=Dragon3
+ +[yes]->win1
+ +[no]->pick
+  ===conferm4===
+ Are you sure you want to send {Dragon1} for the {rounds} round ?
+ ~DragonOut=Dragon1
+ +[yes]->win2
+ +[no]->pick2
+  ===conferm5===
+ Are you sure you want to send {Dragon2} for the {rounds} round ?
+ ~DragonOut=Dragon2
+ +[yes]->win2
+ +[no]->pick2
+  ===conferm6===
+ Are you sure you want to send {Dragon3} for the {rounds} round ?
+ ~DragonOut=Dragon3
+ +[yes]->win2
+ +[no]->pick2
+  ===conferm7===
+ Are you sure you want to send {Dragon1} for the {rounds} round ?
+ ~DragonOut=Dragon1
+ +[yes]->win3
+ +[no]->pick3
   ===conferm8===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win8
- +[no]->pick8
+ Are you sure you want to send {Dragon2} for the {rounds} round ?
+ ~DragonOut=Dragon2
+ +[yes]->win3
+ +[no]->pick3
   ===conferm9===
- Are you sure you want to send this dragon for the {rounds} round ?
- +[yes]->win9
- +[no]->pick9
- ===win7===
-
-In the midst of a fierce and intense battle, your strategic prowess comes into play as you skillfully leverage the distinct abilities of your dragon. This combination allows you to overpower your opponent, emerging as the victorious contender. With this triumph, you progress to the subsequent round of the tournament, fully aware that the upcoming adversaries will pose even greater challenges, yet undeterred in your determination to face them head-on. As the rounds increase by one, your journey becomes increasingly arduous, testing your skills and resilience to new heights.
- +[next round]->pick8
-
- ===win8===
-
-Having immersed yourself in a grueling battle, your astute strategic acumen and the extraordinary prowess of your dragons combine to grant you victory over your adversary, a triumph that is truly deserving. With this notable accomplishment, you advance to the next stage of the tournament, fortified with the knowledge that you will soon encounter adversaries of greater might and prowess, ready to face them head-on with unwavering confidence.
+ Are you sure you want to send {Dragon3} for the {rounds} round ?
+ ~DragonOut=Dragon3
+ +[yes]->win3
+ +[no]->pick3
+ ===win1===
+{DragonOut=="Fire Dragon" :The Fire dragon was a creature of pure power and untamed ferocity. Born from the heart of an erupting volcano, its scales shimmered with the hues of molten lava. As it took to the skies, its wings beat with the fury of a wildfire, creating an aura of heat that scorched the very air around it. With every breath, it unleashed torrents of flames, reducing anything in its path to ashes. The opponent's defenses crumbled before the relentless onslaught of fire, forcing them to retreat.}
+{DragonOut=="Water Dragon" :Born from the depths of the ocean, the Water dragon possessed a serene yet mighty presence. Its scales glistened like the waves under the moonlight, and its movements were as graceful as a flowing river. With a single wave of its tail, it summoned massive tidal waves, crashing upon the battlefield and dousing the opponent's flames. The water dragon's strategic maneuvers and mastery over hydrokinetic abilities created a misty veil that disoriented the enemy, leaving them vulnerable to further attacks.}
+{DragonOut=="Electric Dragon" : Crackling with energy, the Electric dragon was a formidable force to be reckoned with. Born during a thunderstorm, its iridescent scales shimmered with lightning bolts, electrifying the air around it. With each strike, it discharged powerful bolts of electricity, illuminating the battlefield and inflicting paralyzing shocks upon the opponent. The electric dragon's speed and agility made it difficult to target, allowing it to swiftly exploit the enemy's weaknesses.}
+{DragonOut=="Dark Dragon" :Emerging from the shadows of a moonless night, the Dark dragon embodied mystery and intrigue. Its jet-black scales seemed to absorb all light, creating an aura of darkness that concealed its movements. The dark dragon's piercing gaze held an unsettling allure, capable of weakening the opponent's resolve and sapping their strength. With the power to manipulate shadows, it struck from unexpected angles, delivering devastating blows that shattered the enemy's defenses.}
+{DragonOut=="Light Dragon" : Radiating an ethereal glow, the Light dragon was a beacon of hope and purity. Its pearlescent scales shimmered with the brilliance of a thousand suns, illuminating the darkest corners of the battlefield. With each breath, it emitted beams of pure energy, healing wounds and rejuvenating allies. The light dragon's presence instilled courage and inspired unity, dispelling darkness and revealing the opponent's vulnerabilities with its penetrating light.}
+{DragonOut=="Chaos Dragon" :The Chaos dragon was an enigmatic entity, embodying the unpredictable forces of the universe. Born from the collision of dimensions, its scales swirled with colors and patterns beyond comprehension. It moved with an erratic grace, defying conventional logic and distorting reality itself. The chaos dragon's elemental powers disrupted the opponent's plans, creating havoc and confusion on the battlefield. Its wild and untamed energy left the enemy in disarray, allowing for decisive strikes to be delivered.}
  ~rounds+=1
- +[next round]->pick9
- ===win9===
-  The battle is the toughest you've ever faced, but you and your dragons are determined to emerge victorious. You use all your skills and experience to outmaneuver your opponent and capitalize on their mistakes. With a final, powerful strike, you defeat your opponent and become the champion of the tournament. You are now recognized as one of the most elite dragon tamers in the land, and your legend will live on for generations to come.
+ +[next round]->2round
+
+ ===win2===
+{DragonOut=="Fire Dragon" :The Fire dragon was a creature of pure power and untamed ferocity. Born from the heart of an erupting volcano, its scales shimmered with the hues of molten lava. As it took to the skies, its wings beat with the fury of a wildfire, creating an aura of heat that scorched the very air around it. With every breath, it unleashed torrents of flames, reducing anything in its path to ashes. The opponent's defenses crumbled before the relentless onslaught of fire, forcing them to retreat.}
+{DragonOut=="Water Dragon" :Born from the depths of the ocean, the Water dragon possessed a serene yet mighty presence. Its scales glistened like the waves under the moonlight, and its movements were as graceful as a flowing river. With a single wave of its tail, it summoned massive tidal waves, crashing upon the battlefield and dousing the opponent's flames. The water dragon's strategic maneuvers and mastery over hydrokinetic abilities created a misty veil that disoriented the enemy, leaving them vulnerable to further attacks.}
+{DragonOut=="Electric Dragon" : Crackling with energy, the Electric dragon was a formidable force to be reckoned with. Born during a thunderstorm, its iridescent scales shimmered with lightning bolts, electrifying the air around it. With each strike, it discharged powerful bolts of electricity, illuminating the battlefield and inflicting paralyzing shocks upon the opponent. The electric dragon's speed and agility made it difficult to target, allowing it to swiftly exploit the enemy's weaknesses.}
+{DragonOut=="Dark Dragon" :Emerging from the shadows of a moonless night, the Dark dragon embodied mystery and intrigue. Its jet-black scales seemed to absorb all light, creating an aura of darkness that concealed its movements. The dark dragon's piercing gaze held an unsettling allure, capable of weakening the opponent's resolve and sapping their strength. With the power to manipulate shadows, it struck from unexpected angles, delivering devastating blows that shattered the enemy's defenses.}
+{DragonOut=="Light Dragon" : Radiating an ethereal glow, the Light dragon was a beacon of hope and purity. Its pearlescent scales shimmered with the brilliance of a thousand suns, illuminating the darkest corners of the battlefield. With each breath, it emitted beams of pure energy, healing wounds and rejuvenating allies. The light dragon's presence instilled courage and inspired unity, dispelling darkness and revealing the opponent's vulnerabilities with its penetrating light.}
+{DragonOut=="Chaos Dragon" :The Chaos dragon was an enigmatic entity, embodying the unpredictable forces of the universe. Born from the collision of dimensions, its scales swirled with colors and patterns beyond comprehension. It moved with an erratic grace, defying conventional logic and distorting reality itself. The chaos dragon's elemental powers disrupted the opponent's plans, creating havoc and confusion on the battlefield. Its wild and untamed energy left the enemy in disarray, allowing for decisive strikes to be delivered.}
+ ~rounds+=1
+ +[next round]->3round
+ ===win3===
+   {DragonOut=="Fire Dragon" :The Fire dragon, who had overcome numerous adversaries with its searing flames, faced a formidable opponent known as the Flame Warden. This skilled warrior had mastered the art of fire manipulation, matching the intensity of the Fire dragon's inferno. The battle ignited into a dazzling display of blazing power. The Fire dragon summoned its mightiest flames, creating an inferno that engulfed the arena. The Flame Warden retaliated with equal fervor, their fiery attacks colliding in a cataclysmic clash. It was a battle of endurance and will, with the Fire dragon pushing its limits to overcome the unyielding flames of the Flame Warden.}
+{DragonOut=="Water Dragon" :The Water dragon, renowned for its fluidity and adaptability, faced off against the Tide Weaver, a master of water manipulation. The Tide Weaver commanded massive waves, directing them with precision and force. The Water dragon responded with finesse, dancing amidst the surges and using its hydrokinetic abilities to create a whirlpool that challenged the Tide Weaver's control. The battle became a dance of water and currents, with each dragon vying for dominance over the element. The Water dragon's agility and strategic maneuvers proved crucial in subduing the Tide Weaver's onslaught, ultimately securing victory through its unrivaled mastery of water.}
+{DragonOut=="Electric Dragon" : The Electric dragon, crackling with untamed energy, confronted the Thunderlord, a warrior who commanded the very essence of lightning. Sparks flew as the Thunderlord unleashed bolts of lightning, aiming to overpower the Electric dragon. But the Electric dragon responded with equal fervor, its body a conduit of raw electricity. Arcs of lightning crackled through the air, illuminating the battlefield with their brilliance. It became a contest of power and control, with the Electric dragon maneuvering through the electrified chaos to strike precise and devastating blows. Through its unwavering determination and mastery of electricity, the Electric dragon triumphed over the formidable Thunderlord.}
+{DragonOut=="Dark Dragon" :The Dark dragon, shrouded in mystery and shadow, confronted the Shadowcaster, a master of illusion and darkness. The Shadowcaster conjured twisted nightmares and phantasmal figures, seeking to envelop the Dark dragon in a veil of darkness. But the Dark dragon embraced the shadows with ease, navigating through the illusions with unerring clarity. It retaliated with its own dark powers, conjuring tendrils of inky blackness that devoured the Shadowcaster's illusions. The battle became a struggle between light and darkness, as the Dark dragon's piercing gaze penetrated the deepest shadows, revealing the true form of the Shadowcaster. Through its indomitable spirit and manipulation The Light dragon, radiating a divine aura, faced the Twilight Enforcer, a formidable adversary who blended light and darkness. The Twilight Enforcer wielded contrasting forces, seeking to obscure the brilliance of the Light dragon's radiance. But the Light dragon emanated an unyielding glow, banishing the encroaching shadows with its divine power. It unleashed beams of pure light, infusing the arena with a transcendent luminescence. The battle became a clash of opposing forces, as the Light dragon's healing energy countered the Twilight Enforcer's corrupting darkness. Through its unwavering purity and radiant strength, the Light dragon emerged as a beacon of hope and emerged victorious.}
+{DragonOut=="Light Dragon" : The Light dragon, radiating a divine aura, faced the Twilight Enforcer, a formidable adversary who blended light and darkness. The Twilight Enforcer wielded contrasting forces, seeking to obscure the brilliance of the Light dragon's radiance. But the Light dragon emanated an unyielding glow, banishing the encroaching shadows with its divine power. It unleashed beams of pure light, infusing the arena with a transcendent luminescence. The battle became a clash of opposing forces, as the Light dragon's healing energy countered the Twilight Enforcer's corrupting darkness. Through its unwavering purity and radiant strength, the Light dragon emerged as a beacon of hope and emerged victorious.}
+{DragonOut=="Chaos Dragon" : The Chaos dragon, an embodiment of unpredictable forces, faced its ultimate challenge in the final round. Its opponent was the Enigma, a master of chaos manipulation. The Enigma possessed the ability to distort reality, bending time and space to their will. The battle unfolded in a realm of swirling chaos, where the laws of nature seemed to unravel.}
      ~rounds=1
      +[END]->Gend
+
     
     
     

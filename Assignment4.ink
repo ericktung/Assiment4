@@ -7,6 +7,7 @@ VAR drgonnum =0
 VAR Dragon1=""
 VAR Dragon2=""
 VAR Dragon3=""
+VAR DragonOut=""
 VAR powvar=0
 VAR t_attack = 0
 VAR die_t=0
@@ -108,13 +109,13 @@ In the first round of the tournament, you and your dragons face off against a sk
 ===2round===
 {t_attack>200:
 In the semi-finals of the tournament, you face off against a formidable opponent with a power level of 200.  
- + [pick your dragon for the {rounds} fight]->pick4
+ + [pick your dragon for the {rounds} fight]->pick2
     -else :->2f
 }
 ===3round===
 {t_attack>400:
 In the final round of the tournament, you face off against the most powerful tamer with a power level of 400. 
- + [pick your dragon for the {rounds} fight]->pick7
+ + [pick your dragon for the {rounds} fight]->pick3
  -else :->3f
 }
 ===1f===
